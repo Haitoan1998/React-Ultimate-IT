@@ -15,13 +15,15 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  flex-direction: row;
+  min-height: auto;
 }
 
 .App-link {
@@ -35,4 +37,273 @@
   to {
     transform: rotate(360deg);
   }
+}
+.left {
+  width: 20%;
+}
+.right {
+  width: 80%;
+  border: 1px solid white;
+  height: 90%;
+}
+.product-container {
+  display: flex;
+}
+.content-left {
+  width: 50%;
+}
+.content-right {
+  width: 50%;
+  text-align: left;
+  padding: 10px 0;
+}
+.title {
+  font-size: 18px;
+  font-weight: 600;
+}
+.price {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 5px 0 15px 0;
+}
+.size {
+  padding: 5px 0;
+}
+.action {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.action input {
+  border: none;
+  outline: none;
+  height: 25px;
+  width: 25px;
+  border-radius: 3px;
+}
+
+.action .quantity {
+  padding: 15px 0 5px 0;
+  font-size: 18px;
+}
+
+.action button {
+  background-color: #ff3945;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  height: 30px;
+  color: white;
+  width: 60%;
+}
+.img-up {
+  width: 70%;
+  margin: 0 auto;
+  height: 50%;
+  margin-bottom: 20px;
+}
+.img-up img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.img-down {
+  display: flex;
+  width: 80%;
+  gap: 10px;
+  margin: 0 auto;
+}
+.img-down .img-small {
+  width: 25%;
+  cursor: pointer;
+}
+.img-small img {
+  width: 100%;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04aa6d;
+  color: white;
+}
+
+.search-weather {
+  margin-top: 30px;
+}
+.search-weather input {
+  height: 30px;
+  width: 50%;
+  font-size: 20px;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 0 10px;
+  margin-right: 10px;
+}
+.search-weather button {
+  height: 30px;
+  width: 10%;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.weather {
+  width: 70%;
+  background-image: url(https://cdn.weatherapi.com/weather-widget/img/weatherapi-backgrounds/4_widget3.png);
+  margin: 0 auto;
+  height: 300px;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  padding: 20px 10px;
+}
+.title-weather {
+  font-size: 30px;
+  margin-top: 20px;
+  font-weight: 600;
+}
+.country {
+  font-size: 25px;
+  color: #adb4c0;
+}
+.current-icon {
+  display: flex;
+}
+.current-icon div {
+  display: flex;
+  align-items: center;
+}
+.current-day {
+  display: flex;
+  height: 60%;
+  justify-content: space-around;
+}
+.current-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.current-temperature {
+  font-size: 40px;
+  margin-top: 5px;
+}
+.current-img {
+  width: 100%;
+}
+.current-img img {
+  width: 100%;
+  object-fit: contain;
+}
+.next-day {
+  height: 40%;
+  display: flex;
+  justify-content: space-around;
+}
+.otp-input {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  border: 1px solid gray;
+  flex-direction: column;
+  padding: 15px 10px;
+  width: 500px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+.otp {
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 20px 20px 20px;
+}
+.title-input {
+  font-size: 20px;
+  font-weight: 600;
+}
+.action-input button {
+  height: 28px;
+  margin-right: 20px;
+}
+.count-down-animation-container {
+  display: flex;
+  justify-content: center;
+}
+
+.base-timer {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+.base-timer__svg {
+  transform: scaleX(-1);
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: grey;
+}
+
+.base-timer__path-remaining {
+  stroke-width: 7px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+  color: rgb(65, 184, 131);
+}
+
+.base-timer__path-remaining.orange {
+  color: orange;
+}
+
+.base-timer__path-remaining.red {
+  color: red;
+}
+
+.base-timer__label {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
 }
