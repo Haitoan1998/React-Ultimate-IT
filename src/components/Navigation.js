@@ -10,6 +10,7 @@ export default function Navigation() {
         <NavLink to={"/product"}>product</NavLink>{" "}
         <NavLink to={"/otp"}>OTP</NavLink>
         <NavLink to={"/about"}>ABOUT</NavLink>
+        <NavLink to={"/UseMemoCallbackMemo"}>UseMemoCallbackMemo</NavLink>
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ import { Routes, Route } from "react-router";
 import Weather from "./components/weather/Weather";
 import OTP from "./components/OTP/OTP";
 import Layout from "./components/Layout";
+import UseMemoCallbackMemo from "./components/UseMemo,callback,memo/UseMemoCallbackMemo";
 
 function App() {
   const [isShow, setIsShow] = useState(false);
@@ -47,7 +48,11 @@ function App() {
           />
           <Route path="/product" element={<Product />} />
           <Route path="/weather" element={<Weather />} />
-          <Route path="/OTP" element={<OTP />} />
+          <Route path="/OTP" element={<OTP />} />{" "}
+          <Route
+            path="/UseMemoCallbackMemo"
+            element={<UseMemoCallbackMemo />}
+          />
           <Route path="*" element={<>not found</>} />
         </Route>
       </Routes>
